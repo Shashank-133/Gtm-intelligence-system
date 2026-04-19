@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // ── Middleware ─────────────────────────────────────────────
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "*", methods: ["GET","POST"], allowedHeaders: ["Content-Type"] }));
 app.use(express.json());
 
 // ── Logging ────────────────────────────────────────────────
@@ -103,4 +103,5 @@ app.listen(PORT, () => {
     log("WARN", "GROQ_API_KEY not set! Add it to backend/.env");
   }
 });
+
 
