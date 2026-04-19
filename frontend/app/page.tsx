@@ -79,7 +79,7 @@ function AgentPipeline({ agentStatuses, completedCount }: { agentStatuses: Recor
   );
 }
 
-function CompanyCard({ company }: { company: Company }) {
+function CompanyCard({ company }: { company: any }) {
   const [showWhy, setShowWhy] = useState(false);
   const icp = company.icpScore;
   const signals = (company.buyingSignals||[]).slice(0,4);
@@ -440,3 +440,4 @@ export default function Home() {
     </main>
   );
 }
+
