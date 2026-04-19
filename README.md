@@ -2,7 +2,7 @@
 
 **Live Frontend:** https://gtm-intelligence-system.vercel.app
 **Live Backend:** https://gtm-intelligence-system.onrender.com
-**GitHub:** https://github.com/Shashank-133/Gtm-intelligence-system
+
 
 # Outmate GTM Intelligence System
 ### Multi-Agent AI · Node.js + Express · Next.js · Groq (Free)
@@ -20,20 +20,12 @@
 ```bash
 cd backend
 cp .env.example .env
-# GTM Intelligence System
 
-**Live Frontend:** https://gtm-intelligence-system.vercel.app
-**Live Backend:** https://gtm-intelligence-system.onrender.com
-**GitHub:** https://github.com/Shashank-133/Gtm-intelligence-system
 
 # Paste your Groq key into .env
 npm install
 npm run dev
-# GTM Intelligence System
 
-**Live Frontend:** https://gtm-intelligence-system.vercel.app
-**Live Backend:** https://gtm-intelligence-system.onrender.com
-**GitHub:** https://github.com/Shashank-133/Gtm-intelligence-system
 
 # Running on http://localhost:4000
 ```
@@ -121,6 +113,11 @@ User Query (natural language)
 - VP Sales, CTO, CEO strategies generated per query
 
 ---
+# GTM Intelligence System
+
+**Live Frontend:** https://gtm-intelligence-system.vercel.app
+**Live Backend:** https://gtm-intelligence-system.onrender.com
+
 
 ## Tech Stack
 
