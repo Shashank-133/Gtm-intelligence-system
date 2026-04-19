@@ -30,7 +30,7 @@ const signalColor = {
   risk_signal: "#dc2626", warning: "#d97706",
 };
 
-function ICPRing({ score, tier }) {
+function ICPRing({ score, tier }: { score: number; tier: string }) {
   const r = 17;
   const circ = 2 * Math.PI * r;
   const offset = circ - (score / 100) * circ;
