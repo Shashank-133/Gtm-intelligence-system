@@ -3,33 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0f;
-  --bg2: #111118;
-  --surface: #1c1c28;
-  --surface2: #22222e;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.12);
-  --accent: #6c63ff;
-  --accent2: #a855f7;
-  --accent3: #38bdf8;
-  --green: #22d3a5;
-  --amber: #f59e0b;
-  --red: #f43f5e;
-  --text: #e8e6f0;
-  --text2: #9896aa;
-  --text3: #5c5a6b;
+  --bg: #f8f9fc;
+  --bg2: #ffffff;
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --border2: rgba(0,0,0,0.15);
+  --accent: #4f46e5;
+  --green: #059669;
+  --amber: #d97706;
+  --red: #dc2626;
+  --text: #0f172a;
+  --text2: #475569;
+  --text3: #94a3b8;
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{background:var(--bg);color:var(--text);font-family:var(--font-sans),sans-serif;min-height:100vh;overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(108,99,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(108,99,255,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+html,body{background:#f8f9fc;color:#0f172a;font-family:var(--font-sans),sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,70,229,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,70,229,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
 ::-webkit-scrollbar{width:4px;height:4px;}
-::-webkit-scrollbar-track{background:transparent;}
-::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+::-webkit-scrollbar-thumb{background:#e2e8f0;border-radius:2px;}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.85);}}
 @keyframes fade-in{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 @keyframes spin{to{transform:rotate(360deg);}}
-@keyframes icon-pulse{0%,100%{box-shadow:0 0 14px rgba(108,99,255,0.2);}50%{box-shadow:0 0 28px rgba(108,99,255,0.5);}}
+@keyframes icon-pulse{0%,100%{box-shadow:0 0 14px rgba(79,70,229,0.15);}50%{box-shadow:0 0 28px rgba(79,70,229,0.35);}}
 .animate-fade-in{animation:fade-in 0.35s ease forwards;}
 .animate-spin{animation:spin 0.7s linear infinite;}
 .animate-pulse-dot{animation:pulse-dot 2s infinite;}
