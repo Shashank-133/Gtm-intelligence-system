@@ -79,7 +79,7 @@ function AgentPipeline({ agentStatuses, completedCount }: { agentStatuses: Recor
   );
 }
 
-function CompanyCard({ company }) {
+function CompanyCard({ company }: { company: Company }) {
   const [showWhy, setShowWhy] = useState(false);
   const icp = company.icpScore;
   const signals = (company.buyingSignals||[]).slice(0,4);
