@@ -113,11 +113,6 @@ User Query (natural language)
 - VP Sales, CTO, CEO strategies generated per query
 
 ---
-# GTM Intelligence System
-
-**Live Frontend:** https://gtm-intelligence-system.vercel.app
-**Live Backend:** https://gtm-intelligence-system.onrender.com
-
 
 ## Tech Stack
 
