@@ -356,8 +356,7 @@ Be specific — reference actual company signals. No generic templates.`;
         0.87);
       mem.setAgentStatus(this.name, "done", `${strategy.hooks?.length || 0} hooks generated`);
       return strategy;
-    } catch (err) {
-      mem.addTrace(this.name, "error", `Strategy generation failed: ${err.message}`, 0, true);
+    } catch (err) { console.error("GTM AGENT ERROR:", err.message, err.stack); mem.addTrace(this.name, "error", `Strategy generation failed: ${err.message}`, 0, true);
       mem.setAgentStatus(this.name, "failed", err.message);
       return {
         hooks: top.map(c => ({ company: c.name, hook: `Personalized outreach for ${c.name} based on ${c.stage} stage and recent signals.` })),
@@ -368,4 +367,5 @@ Be specific — reference actual company signals. No generic templates.`;
     }
   }
 }
+
 
