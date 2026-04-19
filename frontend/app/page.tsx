@@ -16,7 +16,7 @@ const EXAMPLES = [
   "Find companies likely to churn competitors and how to target them",
 ];
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API = "https://gtm-intelligence-system.onrender.com";
 
 const agentColor = {
   Planner: "#7c3aed", Retrieval: "#0ea5e9", Enrichment: "#059669",
@@ -440,5 +440,6 @@ export default function Home() {
     </main>
   );
 }
+
 
 
