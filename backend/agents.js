@@ -324,19 +324,7 @@ export class GTMStrategyAgent {
     const top = enriched.slice(0, 5);
     mem.addTrace(this.name, "start", `Generating strategy for ${top.length} companies, persona: ${plan.targetPersona}`);
 
-    const companiesSummary = JSON.stringify(top.map(c => ({
-      name: c.name,
-      industry: c.industry,
-      vertical: c.vertical,
-      stage: c.stage,
-      headcountGrowth: c.headcountGrowth6m,
-      techStack: c.techStack?.slice(0, 4),
-      growthSignals: c.growthSignals?.slice(0, 3),
-      churnSignals: c.churnSignals?.slice(0, 2),
-      competitors: c.competitors?.slice(0, 2),
-      icpScore: c.icpScore?.total,
-      buyingSignals: c.buyingSignals?.slice(0, 3).map(s => s.detail),
-    })), null, 2);
+    const companiesSummary = top.map(c => `${c.name} (${c.industry}, ${c.stage}): growth ${c.headcountGrowth6m}%, signals: ${c.buyingSignals?.slice(0,2).map(s=>s.detail).join(", ")}, tech: ${c.techStack?.slice(0,3).join(", ")}`).join("\n");
 
     const system = `You are a world-class GTM strategist.
 Return ONLY valid JSON — no markdown, no backticks:
@@ -380,3 +368,4 @@ Be specific — reference actual company signals. No generic templates.`;
     }
   }
 }
+
