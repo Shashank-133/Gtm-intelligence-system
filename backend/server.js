@@ -103,3 +103,4 @@ app.listen(PORT, () => {
     log("WARN", "GROQ_API_KEY not set! Add it to backend/.env");
   }
 });
+
