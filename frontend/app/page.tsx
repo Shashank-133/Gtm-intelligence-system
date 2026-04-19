@@ -84,7 +84,7 @@ function CompanyCard({ company }: { company: any }) {
   const icp = company.icpScore;
   const signals = (company.buyingSignals||[]).slice(0,4);
   const whyText = icp
-    ? `${company.name} scored ${icp.tier}-tier (${icp.total}/100): growth ${icp.breakdown.growth}/40, intent ${icp.breakdown.intent}/30, fit ${icp.breakdown.fit}/30.${signals.length?" Key signals: "+signals.map(s=>s.detail).join("; ")+".":""}${company.churnSignals?.length?" ⚠️ Risk: "+company.churnSignals.join(", ")+".":""}`
+    ? `${company.name} scored ${icp.tier}-tier (${icp.total}/100): growth ${icp.breakdown.growth}/40, intent ${icp.breakdown.intent}/30, fit ${icp.breakdown.fit}/30.${signals.length?" Key signals: "+signals.map((s:any)=>s.detail).join("; ")+".":""}${company.churnSignals?.length?" ⚠️ Risk: "+company.churnSignals.join(", ")+".":""}`
     : "Scored based on growth velocity, funding stage, hiring signals, and industry fit.";
 
   return (
@@ -440,4 +440,5 @@ export default function Home() {
     </main>
   );
 }
+
 
