@@ -50,7 +50,7 @@ function ICPRing({ score, tier }: { score: number; tier: string }) {
   );
 }
 
-function AgentPipeline({ agentStatuses, completedCount }) {
+function AgentPipeline({ agentStatuses, completedCount }: { agentStatuses: Record<string, string>; completedCount: number }) {
   return (
     <div style={{display:"flex",alignItems:"center",marginBottom:24,background:"#ffffff",border:"1px solid #e2e8f0",borderRadius:12,padding:"16px 20px",boxShadow:"0 1px 4px rgba(0,0,0,0.06)"}}>
       {AGENTS.map((a, i) => {
